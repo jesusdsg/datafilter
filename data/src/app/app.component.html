@@ -5,11 +5,12 @@
   <h1>Pedidos Pendientes</h1>
 <div class="btn-container">
   <button class="btn btn-primary mr-1" (click)="setMarca()">Marca</button>
-  <button class="btn btn-primary mr-1" (click)="setMarca()">Artículo</button>
-  <button class="btn btn-primary mr-1" (click)="setMarca()">Categoria</button>
-  <button class="btn btn-primary mr-1" (click)="setMarca()">Vendedor</button>
-  <button class="btn btn-primary mr-1" (click)="setMarca()">Cliente</button>
-  <button class="btn btn-primary mr-1" (click)="setMarca()">Pedido</button>
+  <button class="btn btn-primary mr-1" (click)="setArticulo()">Artículo</button>
+  <button class="btn btn-primary mr-1" (click)="setCategoria()">Categoria</button>
+  <button class="btn btn-primary mr-1" (click)="setVendedor()">Vendedor</button>
+  <button class="btn btn-primary mr-1" (click)="setCliente()">Cliente</button>
+  <button class="btn btn-primary mr-1" (click)="setDocumento()">Pedido</button>
+  <input type="text" class="main-input" placeholder="Buscar..." (input)="filterServices($event)">
 </div>
 <table id="services">
   <tr>

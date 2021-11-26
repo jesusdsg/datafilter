@@ -11,7 +11,7 @@ export class ServiceService {
 
 
   getServices(): Observable<any[]> {
-    return this.firestore.collection('services', ref => ref.orderBy('CardName', 'asc')).snapshotChanges();
+    return this.firestore.collection('services', ref => ref.orderBy('CardName', 'asc').limit(100)).snapshotChanges();
   }
 
 }

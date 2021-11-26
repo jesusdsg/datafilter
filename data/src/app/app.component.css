@@ -2,9 +2,15 @@ h1 {
   font-family: 'Open Sans', Helvetica, sans-serif;
 }
 
-body {
-  
-  transition: all 0.3s ease-in-out;
+
+.main-input {
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  border:1px solid #ccc;
+}
+
+.main-input:focus {
+  outline: none;
 }
 
 .mr-1{
@@ -17,7 +23,10 @@ body {
 }
 
 .container {
+  margin-top: 4rem !important;
+  margin-bottom: 5rem !important;
   width: 90%;
+  padding: 2rem;
   background-color: #fff;
   border-radius: 10px;
   margin:auto;
@@ -28,7 +37,7 @@ body {
   border-color: #436b8b;
   border:none;
   color: #fff;
-  padding: 0.8rem 2rem;
+  padding: 0.5rem 1.5rem;
   border-radius: 10px;
   cursor: pointer;
 }
@@ -43,10 +52,11 @@ body {
     font-family: 'Open Sans', Helvetica, sans-serif;
     border-collapse: collapse;
     width: 100%;
+    border-radius: 10px;
   }
   
   #services td, #services th {
-    border: 1px solid #ddd;
+    border: 1px solid #eeeeee;
     padding: 8px;
   }
   
@@ -58,6 +68,6 @@ body {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
-    background-color: #436b8b;
-    color: white;
+    background-color: #b9d1e4;
+    color: #464646;
   }
