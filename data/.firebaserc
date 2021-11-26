@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "datafilter-20a96": {
+      "hosting": {
+        "data": [
+          "datafilter-20a96"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "datafilter-20a96"
+  }
+}
