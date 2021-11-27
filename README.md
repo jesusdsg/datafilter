@@ -1,27 +1,11 @@
-# Data
+# datafilter
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.11.
+Bienvenido al Readme del DataFilter: es una vista desarrollada en angular para el manejo dinámicos de datos, cargados desde un JSON.
+El proyecto solo incluye una vista, realizada desde el app component, con sus respectivos y sencillos estilos en CSS puro.
 
-## Development server
+* Para la conexión con los datos he agregado dos métodos:
+* * El principal es un JSON alojado en Firebase - Firestore
+* * El segundo es un auxiliar y es un JSON dentro del archivo (Este con fines de manejos de datos en la prueba por si se alcanza el límite de consultas en Firestore)
+* Por eso si la primera opción no está disponible por favor cambiar dentro del `onInit(): void { this.getServices }` por `onInit(): void { this.getLocalServices }`
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Eso sería todo, espero que el código compile de manera correcta. :smile:
