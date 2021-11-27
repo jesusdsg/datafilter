@@ -1,36 +1,40 @@
 <div class="container">
-
-
-<div>
-  <h1>Pedidos Pendientes</h1>
-<div class="btn-container">
-  <button class="btn btn-primary mr-1" (click)="setMarca()">Marca</button>
-  <button class="btn btn-primary mr-1" (click)="setArticulo()">Artículo</button>
-  <button class="btn btn-primary mr-1" (click)="setCategoria()">Categoria</button>
-  <button class="btn btn-primary mr-1" (click)="setVendedor()">Vendedor</button>
-  <button class="btn btn-primary mr-1" (click)="setCliente()">Cliente</button>
-  <button class="btn btn-primary mr-1" (click)="setDocumento()">Pedido</button>
-  <input type="text" class="main-input" placeholder="Buscar..." (input)="filterServices($event)">
-</div>
-<table id="services">
-  <tr>
-    <th># Pedido</th>
-    <th>Vendedor</th>
-    <th>Cliente</th> 
-    <th>Artículo</th> 
-    <th>Marca</th>
-    <th>Categoria</th>
-    <th>Cantidad</th>
-  </tr>
-  <tr *ngFor="let item of items">
-    <td>{{item.docnum}}</td>
-    <td>{{item.slpcode + ' ' + item.slpname}}</td>
-    <td>{{item.cardcode + ' ' + item.cardname}}</td>
-    <td>{{item.itemcode}}</td>
-    <td>{{item.firmcode + ' ' + item.firmname}}</td>
-    <td>{{item.categoriacode + ' ' + item.categorianame}}</td>
-    <td>{{item.quantity}}</td>
-  </tr>
-</table>
-</div>
+  <div>
+    <h1>Pedidos Pendientes</h1>
+    <div class="btn-container">
+      <button class="btn btn-primary mr-1" (click)="setMarca()"
+        [ngClass]="[marca ? 'btn-primary-clicked' : 'btn-primary']">Marca</button>
+      <button class="btn btn-primary mr-1" (click)="setArticulo()"
+        [ngClass]="[articulo ? 'btn-primary-clicked' : 'btn-primary']">Artículo</button>
+      <button class="btn btn-primary mr-1" (click)="setCategoria()"
+        [ngClass]="[categoria ? 'btn-primary-clicked' : 'btn-primary']">Categoria</button>
+      <button class="btn btn-primary mr-1" (click)="setVendedor()"
+        [ngClass]="[vendedor ? 'btn-primary-clicked' : 'btn-primary']">Vendedor</button>
+      <button class="btn btn-primary mr-1" (click)="setCliente()"
+        [ngClass]="[cliente ? 'btn-primary-clicked' : 'btn-primary']">Cliente</button>
+      <button class="btn btn-primary mr-1" (click)="setDocumento()"
+        [ngClass]="[documento ? 'btn-primary-clicked' : 'btn-primary']">Pedido</button>
+      <input type="text" class="main-input" placeholder="Buscar..." (input)="filterServices($event)">
+    </div>
+    <table id="services">
+      <tr>
+        <th>#Pedido<i *ngIf="documento" class="fas fa-caret-down"></i></th>
+        <th>Vendedor <i *ngIf="vendedor" class="fas fa-caret-down"></i></th>
+        <th>Cliente <i *ngIf="cliente" class="fas fa-caret-down"></i></th>
+        <th>Artículo <i *ngIf="articulo" class="fas fa-caret-down"></i></th>
+        <th>Marca <i *ngIf="marca" class="fas fa-caret-down"></i></th>
+        <th>Categoria <i *ngIf="categoria" class="fas fa-caret-down"></i></th>
+        <th>Cantidad </th>
+      </tr>
+      <tr *ngFor="let item of items">
+        <td>{{"#"+ item.docnum + ""}}</td>
+        <td>{{item.slpcode + ' ' + item.slpname}}</td>
+        <td>{{item.cardcode + ' ' + item.cardname}}</td>
+        <td>{{item.itemcode}}</td>
+        <td>{{item.firmname}}</td>
+        <td>{{item.categorianame}}</td>
+        <td>{{item.quantity}}</td>
+      </tr>
+    </table>
+  </div>
 </div>
